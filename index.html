@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>First JavaScript</title>
 </head>
 <body>
+<script>
+    var cans = 10
+    var drink = "Мой напиток"
+    var lyrics = ""
+    while (cans > 0){
+        lyrics = lyrics + drink + "<br";
+
+        if (cans > 1){
+            lyrics  = lyrics + "Будем пить";
+        }
+        else {
+            lyrics = lyrics + "Хватит пить <br>";
+        }
+        cans = cans - 1;
+    }
+
+    document.write(lyrics);
+</script>
 
 </body>
 </html>
