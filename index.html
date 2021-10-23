@@ -6,18 +6,11 @@
 </head>
 <body>
 <script>
-    var cans = 10
-    var drink = "Мой напиток"
-    var lyrics = ""
+    var cans = 10;
+    var drink = "Мой напиток";
+    var lyrics = "";
     while (cans > 0){
-        lyrics = lyrics + drink + "<br";
-
-        if (cans > 1){
-            lyrics  = lyrics + "Будем пить";
-        }
-        else {
-            lyrics = lyrics + "Хватит пить <br>";
-        }
+        lyrics = drink + "<br";
         cans = cans - 1;
     }
 
