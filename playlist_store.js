@@ -16,3 +16,18 @@ function save(item){
             }
         }
     }
+
+    function getSavedSongs(){
+    return getStorArray("playlist");
+    }
+
+    function getStorArray(key){
+    let playlistArray = localStorage.getItem(key);
+    if (playlistArray == null || playlistArray == ""){
+        playlistArray = new Array();
+    }
+    else {
+        playlistArray = JSON.parse(playlistArray);
+    }
+    return playlistArray;
+    }
