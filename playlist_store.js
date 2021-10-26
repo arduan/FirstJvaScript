@@ -4,6 +4,15 @@ function save(item){
     localStorage.setItem("playlist", JSON.stringify(playlistArray));
     }
 
-    function loadPlaylist(){
 
+    function loadPlaylist(){
+        let playlistArray = getSavedSongs();
+        let ul = document.getElementById("playlist");
+        if (playlistArray != null){
+            for (let i = 0; i < playlistArray.length; i++);{
+                let li = document.createElement("li");
+                li.innerHTML = playlistArray[i];
+                ul.appendChild(li);
+            }
+        }
     }
